@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Survival Hub | Homework Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">✦ Student Survival Hub</a>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="homework.html">Homework Tracker</a>
+      <a href="tips.html">Study Tips</a>
+      <button id="theme-toggle" class="theme-button" type="button">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">STAY ON TOP OF YOUR WORK</p>
+      <h1>Your Homework Tracker 📚</h1>
+      <p>Keep every assignment in one place. Add your work, track your progress, and celebrate each task you complete.</p>
+    </section>
+
+    <section class="tracker-layout">
+      <div class="card form-card">
+        <h2>Add an assignment</h2>
+        <form id="homework-form">
+          <label for="assignment-name">Assignment name</label>
+          <input id="assignment-name" name="assignment" type="text" placeholder="e.g. Algebra practice" required maxlength="100">
+
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="">Choose a subject</option>
+            <option>English</option>
+            <option>Math</option>
+            <option>Science</option>
+            <option>History</option>
+            <option>World Language</option>
+            <option>Art</option>
+            <option>Other</option>
+          </select>
+
+          <label for="due-date">Due date</label>
+          <input id="due-date" name="dueDate" type="date" required>
+
+          <button class="primary-button full-width" type="submit">+ Add Assignment</button>
+        </form>
+        <p class="small-note">Your assignments are saved in this page while it remains open. Refreshing the page will reset the list.</p>
+      </div>
+
+      <div class="card assignments-card">
+        <div class="section-heading-row">
+          <div>
+            <h2>My assignments</h2>
+            <p class="muted">One step at a time!</p>
+          </div>
+          <span id="assignment-count" class="count-badge">0 tasks</span>
+        </div>
+
+        <div class="progress-track" aria-label="Assignment completion progress">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <p id="progress-text" class="muted">Add an assignment to get started.</p>
+
+        <ul id="assignment-list" class="assignment-list" aria-live="polite">
+          <li id="empty-state" class="empty-state">✨ You're ready to get organized! Add your first assignment.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card tip-banner">
+        <span class="card-icon">💡</span>
+        <div>
+          <h2>Quick organization tip</h2>
+          <p>Start with assignments due soonest, then break larger projects into smaller steps.</p>
+          <a href="tips.html">Explore more study tips →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Student Survival Hub · One assignment at a time</p>
+    <p><a href="index.html">Home</a> · <a href="homework.html">Homework</a> · <a href="tips.html">Study Tips</a></p>
+  </footer>
+</body>
+</html>
